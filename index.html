@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>f3rjara - Make It Real</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="usuario" id="user">
+        <img src="img/f3rjara.png" alt="Fernando Jaramillo">
+    </div>
+    <div class="info">
+        <h2>Fernando Jaramillo</h2>        
+        <h3>San Juan de Pasto - Nariño</h3>       
+    </div>
+    <script>
+        function load() {         
+           setInterval(cambiarFondo, 3000);
+        }
+
+        colores = ["blue", "red", "yellow","orange","teal","green","purple"];
+        var usuario = document.getElementById('user');
+
+        function cambiarFondo() {                
+            var pos = Math.floor(Math.random() * (colores.length));   
+            usuario.style.backgroundColor = colores[pos];
+        }
+        window.onload = load;
+      </script>
+</body>
+</html>
